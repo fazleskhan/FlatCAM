@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN pwd
 RUN apt update
-RUN apt install -y wget unzip
+RUN apt install -y wget unzip sudo
 WORKDIR /flatcam
 RUN pwd
 RUN wget https://bitbucket.org/jpcgt/flatcam/downloads/FlatCAM_beta_8.994_sources.zip
@@ -12,8 +12,5 @@ RUN ls
 WORKDIR /flatcam/FlatCAM_beta_8.994_sources
 RUN pwd
 RUN ls
-RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
-# removing sudo since images are built as root
-RUN sed -i 's/sudo apt-get/apt-get/g' /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN DEBIAN_FRONTEND=noninteractive sh -x /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
