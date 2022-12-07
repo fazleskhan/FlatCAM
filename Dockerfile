@@ -2,12 +2,13 @@ FROM ubuntu
 RUN pwd
 RUN apt update
 RUN apt install -y sudo wget unzip
+WORKDIR /flatcam
 RUN wget https://bitbucket.org/jpcgt/flatcam/downloads/FlatCAM_beta_8.994_sources.zip
 RUN pwd
 RUN ls
 RUN unzip FlatCAM_beta_8.994_sources.zip
 RUN ls
-WORKDIR /home/flatcam/FlatCAM_beta_8.994_sources
+WORKDIR /flatcam/FlatCAM_beta_8.994_sources
 RUN pwd
 RUN ls
 RUN cat /home/flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
