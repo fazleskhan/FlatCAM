@@ -20,3 +20,4 @@ RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN sed -i 's/sudo -H easy_install -U distribute//g' /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN DEBIAN_FRONTEND=noninteractive sh -x /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
+CMD Python FlatCAM.py
