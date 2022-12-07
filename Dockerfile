@@ -14,6 +14,6 @@ RUN pwd
 RUN ls
 RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 # removing sudo since images are built as root
-RUN sed 's/sudo//g'
+RUN sed -i 's/sudo//g' /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN sh -x /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
