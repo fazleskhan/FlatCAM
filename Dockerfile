@@ -1,6 +1,7 @@
 FROM ubuntu
 RUN pwd
-RUN apt-get install wget
+RUN apt update && apt upgrade
+RUN apt install wget
 WORKDIR /flatcam
 RUN pwd
 RUN wget https://bitbucket.org/jpcgt/flatcam/downloads/FlatCAM_beta_8.994_sources.zip
