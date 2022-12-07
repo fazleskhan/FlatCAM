@@ -12,4 +12,8 @@ RUN ls
 WORKDIR /flatcam/FlatCAM_beta_8.994_sources
 RUN pwd
 RUN ls
+RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
+# removing sudo since images are built as root
+RUN set 's/sudo//g'
+RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN sh -x /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
