@@ -2,7 +2,7 @@ FROM ubuntu
 RUN pwd
 RUN apt update
 RUN apt install -y sudo
-RUN adduser -D flatcam
+RUN adduser flatcam
 USER flatcam
 WORKDIR /home/flatcam
 RUN sudo apt install -y wget unzip
