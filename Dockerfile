@@ -13,4 +13,6 @@ WORKDIR /flatcam/FlatCAM_beta_8.994_sources
 RUN pwd
 RUN ls
 RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
+RUN sed -i 's/apt-get/DEBIAN_FRONTEND=noninteractive apt-get/g' /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
+RUN cat /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
 RUN DEBIAN_FRONTEND=noninteractive sh -x /flatcam/FlatCAM_beta_8.994_sources/setup_ubuntu.sh
