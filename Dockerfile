@@ -17,4 +17,4 @@ RUN DEBIAN_FRONTEND=noninteractive git clone https://bitbucket.org/jpcgt/flatcam
              && git checkout origin/Beta
 ADD flatcam.sh /flatcam/             
 WORKDIR /gerbers             
-CMD ["/bin/sh" "-c" "\"/flatcam/flatcam.sh\""]
+CMD /flatcam/flatcam.sh
