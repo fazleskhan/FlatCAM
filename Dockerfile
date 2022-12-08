@@ -2,6 +2,7 @@
 # https://hub.docker.com/layers/marcus2002/flatcam/1/images/sha256-b1c7672de57cec8e36c9e5f122795cfa1a354e635bead9727bb80d564a4d2d5f?context=explore
 
 FROM ubuntu:bionic-20200403
+ADD flatcam-conda-env.yaml / 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y curl wget git gnupg2 gnupg
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential linux-headers-$(uname -r) dkms
 ENV LANG=C.UTF-8
