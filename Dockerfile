@@ -15,5 +15,6 @@ RUN DEBIAN_FRONTEND=noninteractive conda env create -f flatcam-conda-env.yaml
 RUN DEBIAN_FRONTEND=noninteractive git clone https://bitbucket.org/jpcgt/flatcam \
              && cd flatcam \
              && git checkout origin/Beta
+ADD flatcam.sh /flatcam/             
 WORKDIR /gerbers             
 CMD ["/bin/sh" "-c" "\"/flatcam/flatcam.sh\""]
