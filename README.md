@@ -12,13 +12,31 @@ https://hub.docker.com/layers/marcus2002/flatcam/1/images/sha256-b1c7672de57cec8
 
 ## Recommended Installation
 
-A. Install Chocolatey
+### A. Install Chocolatey
 
 Chocolatey is a Windows Package manager that will be used to install DockerDesktop and VcXsrv.
 
 Please refer the official guide https://chocolatey.org/install
 
-B. Install VcXsrv
+### B. Install WSL2
+
+From Administrative Powershell
+```
+choco install wsl2 --params "/Version:2"
+```
+
+### C. Install DockerDesktop
+
+1. Start Administrative Powershell
+2. Execute
+```
+choco install docker-desktop
+```
+3. Reboot machine
+4. Start DockerDesktop
+5. Step through DockerDesktop tutuorial because it will make sure the host is correctly configured.
+
+### D. Install VcXsrv
 
 VcXsrv is a X11 server used to display the GUI of FlatCAM running in the docker image. 
 The after installation the server is configured to accept incomming network connections.
@@ -28,18 +46,19 @@ For this example the docker host and x11 server are the same so the ipaddress of
 Please refer to this blog post for more information https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde
 
 1. Start Administrative Powershell
-2. Execute 'choco install vcxsrv'
+2. Execute 
+```
+choco install vcxsrv
+```
 3. Launch Xlaunch application and follow initial configuration
 4. Select display settings: Multiple windows
 5. Select how to start clients: Start no client
-6. Extra Settings: enable 'Disable access control' 
-7. Save configuration to Desktop (technically not needed)
-8. In powershell execute 'ipfconfig' to find the ipaddress of the VcXsrv host
-
-C. Install DockerDesktop
-
-TBD
-
+6. Extra Settings: enable Disable access control 
+7. Save configuration to Desktop 
+8. In powershell execute below to find the ipaddress of the VcXsrv host
+```
+ipconfig
+```
 ## Start FlatCam
 
 At the command prompt execute to start copy of the original marcus2002/flatcam:1 image 
@@ -47,3 +66,9 @@ At the command prompt execute to start copy of the original marcus2002/flatcam:1
 ```
 docker run -it --rm -e DISPLAY={IPADDRESS}:0.0 fazleskhan/flatcam:marcus2002-flatcam-copy 
 ```
+
+## References
+
+https://hub.docker.com/r/fazleskhan/flatcam
+
+https://github.com/fazleskhan/FlatCAM
