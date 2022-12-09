@@ -38,10 +38,11 @@ choco install docker-desktop
 
 ### D. Install VcXsrv
 
-VcXsrv is a X11 server used to display the GUI of FlatCAM running in the docker image. 
+VcXsrv is a X11 server used to display the GUI of FlatCAM running in the docker container. 
 The after installation the server is configured to accept incomming network connections.
 Later the ipaddress of the VcXsrv server is provide to the running docker container.
 For this example the docker host and x11 server are the same so the ipaddress of docker host is used.
+Localhost and loop-back 127.0.0.1 can not be used because of how docker containers are networked.
 
 Please refer to this blog post for more information https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde
 
