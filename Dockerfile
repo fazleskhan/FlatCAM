@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install xrdp -y
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install install xfce4 xfce4-terminal -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install xfce4 xfce4-terminal -y
 
 RUN DEBIAN_FRONTEND=noninteractive sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
 
