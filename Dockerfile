@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive sed -i.bak '/fi/a #xrdp multiple users config
 
 RUN DEBIAN_FRONTEND=noninteractive adduser xrdp ssl-cert
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install ufw -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install bionic -y
 
 RUN DEBIAN_FRONTEND=noninteractive ufw enable
 
