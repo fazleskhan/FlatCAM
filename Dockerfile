@@ -6,3 +6,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
 # https://docs.e2enetworks.com/guides/ubuntu_xrdp.html
 RUN DEBIAN_FRONTEND=noninteractive apt-get install xrdp -y
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install install xfce4 xfce4-terminal
