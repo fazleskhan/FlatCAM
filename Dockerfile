@@ -4,3 +4,5 @@
 FROM fazleskhan/flatcam:marcus2002-flatcam-copy
 RUN DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
+# https://docs.e2enetworks.com/guides/ubuntu_xrdp.html
+RUN DEBIAN_FRONTEND=noninteractive apt-get install xrdp -y
