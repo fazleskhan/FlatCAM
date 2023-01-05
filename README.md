@@ -51,12 +51,11 @@ TBD
 
 ## Start FlatCam
 
-At the command prompt execute the command below to start an instance of image marcus2002/flatcam:1.
-Provide the ipaddress in the DISPLAY environment variable, for example -e DISPLAY=192.168.1.100:0.0. 
-The trailing ':0.0' in the DISPLAY environment variable indicates the GUI should be rendered on the first display of the first screen and is required.
+At the command prompt execute the command below to start an instance of image fazleskhan/flatcam:dev. 
 
 ```
-docker run -it --rm -e DISPLAY={IPADDRESS}:0.0 fazleskhan/flatcam:marcus2002-flatcam-copy 
+docker compose up
+
 ```
 
 ## References
