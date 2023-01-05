@@ -68,19 +68,15 @@ choco install vcxsrv
 5. Select how to start clients: Start no client
 6. Extra Settings: enable 'Disable access control'
 7. Save configuration to Desktop 
-8. In powershell execute below to find the ipaddress of the VcXsrv host
-```
-ipconfig
-```
+
 ## Start FlatCam
 
-At the command prompt execute the command below to start an instance of image marcus2002/flatcam:1.
-Provide the ipaddress in the DISPLAY environment variable, for example -e DISPLAY=192.168.1.100:0.0. 
-The trailing ':0.0' in the DISPLAY environment variable indicates the GUI should be rendered on the first display of the first screen and is required.
+At the command prompt execute the command below to start an instance of image fazleskhan/flatcam:prod.
 
 ```
-docker run -it --rm -e DISPLAY={IPADDRESS}:0.0 fazleskhan/flatcam:marcus2002-flatcam-copy 
+docker run -it --rm --add-host host.docker.internal:host-gateway -e DISPLAY=host.docker.internal:0.0 fazleskhan/flatcam:prod
 ```
+
 
 ## References
 
