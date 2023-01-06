@@ -78,5 +78,5 @@ https://community.chocolatey.org/packages/wsl2
 Chocolatey DockerDesktop installation:
 https://community.chocolatey.org/packages/docker-desktop
 
-Displaying Docker container gui on Windows
-https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde
+Enabling Remote Desktop on container
+https://www.tek-tools.com/database/how-to-access-linux-desktop-remotely
