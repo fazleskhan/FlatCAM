@@ -84,3 +84,7 @@ https://www.tek-tools.com/database/how-to-access-linux-desktop-remotely
 Remote Desktop on Ubuntu
 https://docs.e2enetworks.com/guides/ubuntu_xrdp.html
 
+Example running xrdp in docker
+https://hub.docker.com/r/scottyhardy/docker-remote-desktop
+
+
