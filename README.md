@@ -54,9 +54,11 @@ TBD
 At the command prompt execute the command below to start an instance of image fazleskhan/flatcam:dev. 
 
 ```
-docker compose up
+docker run -it --rm --hostname="$(hostname)" --publish="33899:3389/tcp" --name="flatcam" fazleskhan/flatcam:dev /bin/bash
 
 ```
+Once the server is up connect with RDP with localhost:33899 and provide the username and password ubuntu
+When the desktop loads start the command line and execute /flatcam/flatcam.sh
 
 ## References
 
@@ -86,5 +88,7 @@ https://docs.e2enetworks.com/guides/ubuntu_xrdp.html
 
 Example running xrdp in docker
 https://hub.docker.com/r/scottyhardy/docker-remote-desktop
+https://github.com/launchthatbrand/scottyhardy-docker-remote-desktop
+
 
 
