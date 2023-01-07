@@ -5,9 +5,12 @@ Based on an the marcus2002/flatcam:1 image found on DockerHub
 
 https://hub.docker.com/layers/marcus2002/flatcam/1/images/sha256-b1c7672de57cec8e36c9e5f122795cfa1a354e635bead9727bb80d564a4d2d5f?context=explore
 
+This iteration provides access via Remote Desktop provided by the xrdp package
+
 ## Requirements
 
 1. DockerEngine with Linux support, i.e. DockerDesktop w/ WSL2
+2. Access to a Remote Desktop client, by default Windows machines have a client named mstsc.exe
 
 ## Recommended Installation
 
@@ -57,8 +60,23 @@ At the command prompt execute the command below to start an instance of image fa
 docker run -it --rm --hostname="$(hostname)" --publish="33899:3389/tcp" --name="flatcam" fazleskhan/flatcam:dev /bin/bash
 
 ```
-Once the server is up connect with RDP with localhost:33899 and provide the username and password ubuntu
-When the desktop loads start the command line and execute /flatcam/flatcam.sh
+
+## Connect Remote Desktop Client
+
+Once the server is running a RDP client needs to connect to the server 
+
+server address : localhost:33899
+
+username/password : ubuntu/ubuntu
+
+## XFCE Desktop
+
+1. The first login you will be prompted to choose how the desktop should be configured. 
+Choose 'Use default config'
+
+2. Click the command line icon, a black square with a white dollar sign
+
+3. At the command prompt type /flatcam/flatcam.sh and the application will start
 
 ## References
 
